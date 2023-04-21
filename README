@@ -1,9 +1,17 @@
 PRESS: README
 ---------------------------------------------------
 
-press is a simple utility written in go for templatizing HTML documents.
-When invoked at the command line, it takes arguments for which content
-should be templatized, in the following fashion:
+Building websites that are unique is fun, and it is still useful to
+craft HTML when putting together web content. But some automation is
+handy to make maintaining even small websites manageable.
+
+'press' is a simple utility written in Go for applying templates to HTML
+content. This allows the user to keep a single file for components such
+as the page metadata and footer, and apply that template to multiple
+content files, filling in elements of the template appropriately.
+
+When invoked at the command line, 'press' takes arguments for which
+content should be templatized, in the following fashion:
 
     press -t template1.html -c page_content.html > output.html
 
