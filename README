@@ -34,6 +34,19 @@ For a list of supported command line arguments, run:
 
 	press -h
 
+This repository also includes a sample website project with a script
+utilizing 'press' to illustrate how it can be employed. To give an
+idea, here is how you might want to organize your site's 'src/'
+directory for use with 'press'.
+
+	src
+	├── content
+	│   ├── about.html
+	│   └── code.html
+	├── templates
+	│   └── pages.html
+	└── index.html
+
 
 Build/Install
 -----------------------------

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ .Title }}</title>
+    <style>
+      body { background-color: honeydew; }
+	</style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      | <a href="/about.html">About</a>
+      | <a href="/code.html">Code</a>
+    </nav>
+    <div class="pageContent">
+	  {{ .Content }}
+	</div>
+  <footer>
+    <hr />
+    <p>(C) 2023 Sample Copyright Footer</p>
+  </footer>
+  </body>
+</html>
