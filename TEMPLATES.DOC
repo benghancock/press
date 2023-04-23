@@ -1,0 +1,11 @@
+PRESS: SUPPORTED TEMPLATE ELEMENTS
+
+HTML templates may contain the following arguments. This is a very short
+list for now, and it will probably see only minimal extension.
+
+.Title
+	The title for the content. By default, this value is pulled from
+	the first <h1> element found in the content being templatized.
+
+.Content
+	The entire text of the content file passed to the command line.
