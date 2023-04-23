@@ -2,4 +2,9 @@ PRESS: PROJECT TODOS
 
 * DONE	Frame up project
 * DONE	Handle flags
-* TODO	Handle multiple templates?
+* LATER Handle multiple templates?
+* TODO Add license to project repo
+* TODO Document supported template elements
+* TODO Add install instructions to README
+* TODO Add sample project to repo to illustrate
+	- This could include example pipelines including pandoc, tidy, etc.
