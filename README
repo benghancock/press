@@ -39,13 +39,13 @@ utilizing 'press' to illustrate how it can be employed. To give an
 idea, here is how you might want to organize your site's 'src/'
 directory for use with 'press'.
 
-	src
+	sample/src
 	├── content
 	│   ├── about.html
-	│   └── code.html
-	├── templates
-	│   └── pages.html
-	└── index.html
+	│   ├── code.html
+	│   └── index.html
+	└── templates
+	    └── pages.html
 
 
 Build/Install
