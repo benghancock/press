@@ -1,5 +1,8 @@
 PRESS: README
----------------------------------------------------
+
+
+Overview
+-----------------------------
 
 Building websites that are unique is fun, and it is still useful to
 craft HTML when putting together web content. But some automation is
@@ -10,6 +13,12 @@ content. This allows the user to keep a single file for components such
 as the page metadata and footer, and apply that template to multiple
 content files, filling in elements of the template appropriately.
 
+This project is a work-in-progress
+
+
+Usage
+-----------------------------
+
 When invoked at the command line, 'press' takes arguments for which
 content should be templatized, in the following fashion:
 
@@ -17,5 +26,23 @@ content should be templatized, in the following fashion:
 
 The idea is that the tool can be used in scripts to aid in generating
 basic static websites, reducing duplication and increasing maintainability.
+Still, this is a simple project. If you're looking for something more
+full-featured to build your blog or static site, or are not keen to
+write raw HTML, try Hugo.
 
-This project is a work-in-progress.
+For a list of supported command line arguments, run:
+
+	press -h
+
+
+Build/Install
+-----------------------------
+
+Assuming that you have Go installed on your system, installation should
+be as simple as:
+
+	go install github.com/benghancock/press
+
+If you already have the repository and want to just install from the
+root directory, leaving out the package name in the above command should
+be sufficient.
