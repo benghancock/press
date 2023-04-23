@@ -34,7 +34,7 @@ func main() {
 	}
 	// Because the user is providing this content, we assume it is safe
 	htmlContent := template.HTML(string(content))
-	pageTitle := parseTitle(string(content))
+	pageTitle := getFirstElemValue(string(content), "h1")
 	t, err := template.ParseFiles(tf)
 	if err != nil {
 		log.Fatal(err)
@@ -46,9 +46,10 @@ func main() {
 	}
 }
 
-// parseTitle retrieves the string in the first h1 tag
-func parseTitle(content string) string {
-	var title string
+// getFirstElemValue reads the HTML content provided and retrieves
+// the value in the first tag matching the given name
+func getFirstElemValue(content string, name string) string {
+	var val string
 	reader := strings.NewReader(content)
 	tokenizer := html.NewTokenizer(reader)
 
@@ -59,17 +60,17 @@ func parseTitle(content string) string {
 
 		case html.ErrorToken:
 			// we've reached the end
-			return title
+			return val
 
 		case html.StartTagToken, html.SelfClosingTagToken:
 			tagName, _ := tokenizer.TagName()
-			if string(tagName) == "h1" {
+			if string(tagName) == name {
 				token = tokenizer.Next()
-				title = tokenizer.Token().String()
+				val = tokenizer.Token().String()
 				break
 			}
 		}
 	}
 
-	return title
+	return val
 }
