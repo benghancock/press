@@ -29,7 +29,7 @@ func main() {
 	}
 	content, err := os.ReadFile(cf)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 	// Because the user is providing this content, we assume it is safe
 	htmlContent := template.HTML(string(content))
