@@ -13,9 +13,8 @@ import (
 var tf string
 var cf string
 
-// FIXME This doesn't actually handle more than one template file
 func init() {
-	flag.StringVar(&tf, "t", "", "path to template file(s)")
+	flag.StringVar(&tf, "t", "", "path to template file")
 	flag.StringVar(&cf, "c", "", "path to content file")
 }
 
