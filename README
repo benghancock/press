@@ -1,21 +1,23 @@
+=======================================================================
 PRESS: README
 
-
-Overview
+-----------------------------
+Motivation & Overview
 -----------------------------
 
 Building websites that are unique is fun, and it is still useful to
-craft HTML when putting together web content. But some automation is
-handy to make maintaining even small websites manageable.
+craft HTML directly when putting together web content. But some
+automation is handy to make maintaining even small websites manageable.
 
 'press' is a simple utility written in Go for applying templates to HTML
 content. This allows the user to keep a single file for components such
 as the page metadata and footer, and apply that template to multiple
 content files, filling in elements of the template appropriately.
 
-This project is a work-in-progress
+This project is a work-in-progress, and is currently very limited in
+scope and functionality.
 
-
+-----------------------------
 Usage
 -----------------------------
 
@@ -25,10 +27,10 @@ content should be templatized, in the following fashion:
     press -t template1.html -c page_content.html > output.html
 
 The idea is that the tool can be used in scripts to aid in generating
-basic static websites, reducing duplication and increasing maintainability.
-Still, this is a simple project. If you're looking for something more
-full-featured to build your blog or static site, or are not keen to
-write raw HTML, try Hugo.
+basic static websites, reducing duplication and increasing
+maintainability.  Still, this is a simple project. If you're looking
+for something full-featured to build your blog or static site, or
+are not keen to write raw HTML, try Hugo.
 
 For a list of supported command line arguments, run:
 
@@ -47,7 +49,9 @@ directory for use with 'press'.
 	└── templates
 	    └── pages.html
 
+Read and execute the file 'sample/generate.sh' to see this in action.
 
+-----------------------------
 Build/Install
 -----------------------------
 
@@ -56,6 +60,8 @@ be as simple as:
 
 	go install github.com/benghancock/press
 
-If you already have the repository and want to just install from the
-root directory, leaving out the package name in the above command should
-be sufficient.
+If you already have the repository locally and want to just install
+from the root directory, leaving out the package name in the above
+command should be sufficient.
+
+// END
