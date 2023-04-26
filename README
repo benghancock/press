@@ -62,6 +62,11 @@ be as simple as:
 
 If you already have the repository locally and want to just install
 from the root directory, leaving out the package name in the above
-command should be sufficient.
+command should be sufficient. You'll want to ensure that your Go
+executables directory is in your PATH, e.g.:
+
+	export PATH=$PATH:$HOME/go/bin
+
+That should allow you to run 'press' at the command line as usual.
 
 // END
